@@ -5,9 +5,11 @@
 		<title></title>
 	</head>
 	<body>
-		<form method="get" action="/Article/Index">
+		<form method="post" action="">
 			{html_options name="catId" options=$cats selected=$catId}
 			{html_options name="authId" options=$authors selected=$authId}
+			<input type="hidden" name="ctrl" value="Article">
+			<input type="hidden" name="action" value="Index">
 			<input type="submit" value="Refresh">
 		</form>
 

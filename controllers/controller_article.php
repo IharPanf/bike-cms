@@ -5,9 +5,10 @@
 	require_once DIR_MODEL . 'model_author.php';
 	require_once DIR_MODEL . 'model_category.php';
 
+
 	class ControllerArticle extends Controller {
 
-		public function Index( $params ) {
+		public function Index($params) {
 
 			$this->view->Show( 'articles.tpl',
 					  array(
@@ -19,6 +20,8 @@
 				'catId'		 => $params[ 'catId' ]
 					)
 			);
+		//TODO 	Вывод статей согласно параметров
+			echo 'Вывод статей согласно параметров(ControllerArticle)'.'<br>';
 		}
 
 		public function Delete( $params ) {
